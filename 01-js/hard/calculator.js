@@ -16,6 +16,47 @@
   Once you've implemented the logic, test your code by running
 */
 
-class Calculator {}
+class Calculator {
 
+  result=0; 
+
+  calculate(value) {
+    try {
+      this.result = eval(value);
+      if (!isFinite(this.result)) {
+        throw new Error('Invalid operation: Division by zero');
+      }
+    } catch (err) {
+      throw new Error('Error in expression');
+    }
+}
+
+  clear(){
+    this.result=0;
+  }
+  add(n){
+    this.result+=n;
+  }
+  subtract(n){
+    this.result-=n;
+  }
+  multiply(n){
+    this.result*=n;
+  }
+  divide(n){
+
+    if(n==0){
+        throw new Error("Error");
+      }
+    this.result=this.result/n;
+
+    }
+  getResult() {
+    return this.result;
+  }
+
+}
+// let calc = new Calculator();
+// calc.add
+// console.log(calc.result);
 module.exports = Calculator;
