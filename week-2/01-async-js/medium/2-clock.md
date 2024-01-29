@@ -20,12 +20,12 @@ Can you make it so that it updates every second, and shows time in the following
 <p id="counter">0</p>
 
 <script>
-  // Initialize counter variable
+
   let h=11;
   let m=59;
   let s = 55;
   let flag=0;
-  // Function to update the counter and display it
+ 
   function updateCounter() {
     if(s==60){
       s=0;
@@ -50,7 +50,7 @@ Can you make it so that it updates every second, and shows time in the following
     setTimeout(updateCounter, 1000);
   }
 
-  // Set up the interval to update the counter every second
+ 
  updateCounter();
 </script>
 
