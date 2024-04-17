@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 
 // Connect to MongoDB
-mongoose.connect('localhost:27017/assignment');
+mongoose.connect('mongodb://localhost:27017/assignmentdb');
 
 // Define schemas
 const AdminSchema = new mongoose.Schema({
