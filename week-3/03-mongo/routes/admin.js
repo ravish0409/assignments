@@ -25,14 +25,15 @@ router.post('/courses', adminMiddleware, async (req, res) => {
     const imageLink=req.body.imageLink;
     const price=req.body.price;
     
-    await Course.create({
+    const course=await Course.create({
         title,
         description,
         imageLink,
         price
     })
     res.json({
-        msg:"Course created successffly"
+        msg:"Course created successffly",
+        courseId:course._id
     })
     
 });
